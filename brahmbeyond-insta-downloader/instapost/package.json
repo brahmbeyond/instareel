@@ -1,0 +1,9 @@
+{
+  "name": "@brahmbeyond/instapost",
+  "version": "1.0.0",
+  "description": "Instagram Post Scrapper",
+  "main": "index.js",
+  "author": "Shubham Yadav",
+  "license": "MIT",
+  "private": false
+}

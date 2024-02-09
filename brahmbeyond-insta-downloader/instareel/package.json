@@ -1,0 +1,9 @@
+{
+  "name": "@brahmbeyond/instareel",
+  "version": "1.0.0",
+  "description": "Instagram Reels downloader using Javascript",
+  "main": "index.js",
+  "author": "Shubham Yadav",
+  "license": "MIT",
+  "private": false
+}
