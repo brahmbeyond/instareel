@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@brahmbeyond/postme": "^1.0.1",
+    "allme": "^1.0.1",
+    "i": "^0.3.7",
+    "npm": "^10.4.0",
     "puppeteer": "^22.0.0"
   }
 }
