@@ -71,9 +71,12 @@ const getInstagramReel = async (instagramReelURL) => {
 
     } catch (error) {
         console.error(error);
-        await browser.close();
+        if (browser) {
+            await browser.close();
+        }
     }
 }
+
 
 
 module.exports = getInstagramReel;

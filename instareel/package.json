@@ -22,6 +22,9 @@
   "author": "Shubham Yadav",
   "license": "MIT",
   "private": false,
+  "bin": {
+    "reel": "./cli.js"
+  },
   "scripts": {
     "reel": "node cli.js get-reel"
   },

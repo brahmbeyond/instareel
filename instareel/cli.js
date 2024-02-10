@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const getInstagramReel = require('./getInstagramReel.js')
 const { Command } = require('commander');
 const program = new Command();
