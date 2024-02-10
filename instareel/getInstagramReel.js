@@ -8,15 +8,15 @@ process.on('unhandledRejection', (reason, promise) => {
 
 const clickDismissButtonIfRequired = async (page) => {
     if (page.url().includes('#')) {
-        // console.log('clicking dismiss button');
+        console.log('clicking dismiss button');
         await page.click('#dismiss-button');
     }
 }
 
-// const URL = 'https://www.instagram.com/reels/C1YuIvdP1xX/'
 
 const getInstagramReel = async (instagramReelURL) => {
     let browser;
+    let downloadLinks = [];
     try {
         browser = await puppeteer.launch();
         const page = await browser.newPage();
@@ -30,48 +30,56 @@ const getInstagramReel = async (instagramReelURL) => {
         ];
 
         const randomUserAgent = userAgents[Math.floor(Math.random() * userAgents.length)];
-        // console.log(randomUserAgent);
+        console.log(randomUserAgent);
         await page.setUserAgent(randomUserAgent);
 
+        let loopCount = 0; // to prevent multiple page.goto calls
+
         for (let url of instagramReelURL) {
-            const url = 'https://snapinsta.app';
-            await page.goto(url);
-            page.waitForNavigation({ waitUntil: 'networkidle0' })
-            // console.log('snapinsta opened');
+            const WebsiteURL = 'https://snapinsta.app';
+
+            if (loopCount === 0) {
+                await page.goto(WebsiteURL);
+                page.waitForNavigation({ waitUntil: 'networkidle0' })
+                console.log('snapinsta opened');
+            }
 
             await clickDismissButtonIfRequired(page);
 
             await page.waitForSelector('#url');
-            // console.log('url found');
-            await page.$eval('input[name="url"]', (el, value) => el.value = value, instagramReelURL);
-            // console.log('URL entered');
+            console.log('url found');
+            await page.$eval('input[name="url"]', (el, value) => el.value = value, url);
+            console.log('URL entered');
 
             await clickDismissButtonIfRequired(page);
 
             await page.waitForSelector('button[type="submit"]');
             await page.$eval('button[type="submit"]', button => button.click());
-            // console.log('submit clicked');
+            console.log('submit clicked');
 
             await clickDismissButtonIfRequired(page);
 
             await page.waitForSelector('.download-bottom');
-            // console.log('download-bottom found');
+            console.log('download-bottom found');
 
             await clickDismissButtonIfRequired(page);
 
             const href = await page.$eval('.download-bottom a', a => a.href);
-            // console.log(href);
-            await page.close();
-            return href;
+            console.log(href);
+            downloadLinks.push(href);
+            loopCount++;
+
+            if (instagramReelURL.length > 1) {    // if there are multiple URLs
+                await page.waitForSelector('.download-footer');
+                console.log('download-footer found');
+                await clickDismissButtonIfRequired(page);
+                await page.$eval('.download-footer a:nth-child(2)', button => button.click());
+            }
         }
-        await browser.close();
-        // return href;  // return the href value
+        return downloadLinks;
 
     } catch (error) {
         console.error(error);
-        if (browser) {
-            await browser.close();
-        }
     } finally {
         if (browser) {
             await browser.close();
@@ -79,16 +87,14 @@ const getInstagramReel = async (instagramReelURL) => {
     }
 }
 
-const ii = ['https://www.instagram.com/p/C2ZE9tqLTQz/']
-// const z = getInstagramReel(ii);
-// console.log(z);
-const main = async () => {
-    const reel = await getInstagramReel(ii);
-    console.log(reel);
-    // Now reel contains the href value
-}
+// const ii = ['https://www.instagram.com/reels/C0QGCdcvCDI/', 'https://www.instagram.com/reels/C2gu9QkNU55/']
 
-main();
+// const main = async () => {
+//     const reel = await getInstagramReel(ii);
+//     console.log(reel);
+// }
+
+// main();
 
 
 
