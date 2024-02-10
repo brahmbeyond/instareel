@@ -1,4 +1,3 @@
-** writing documentation
 # instareel
 
 This project allows you to download your Instagram Reels.
@@ -6,6 +5,10 @@ This project allows you to download your Instagram Reels.
 ## Installation
 ```bash
 npm i @brahmbeyond/instareel 
+```
+To install globally &darr;
+```bash
+npm i -g @brahmbeyond/instareel 
 ```
 
 ## Usage
