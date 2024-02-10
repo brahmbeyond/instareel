@@ -1,9 +1,9 @@
-const getInstagramReel = require('./index.js')
+const getInstagramReel = require('./getInstagramReel.js')
 const { Command } = require('commander');
 const program = new Command();
 
 program
-    .command('get-reel <url>')
+    .command('get-reel <url...>')
     .description('Download Instagram Reel')
     .action(async (url) => {
         try {

@@ -7,5 +7,10 @@ This project allows you to download Instagram Reels using Javascript and Puppete
 
 
 
+### todo
+- human behaviour
+
+
+
 
 
