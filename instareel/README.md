@@ -14,11 +14,11 @@ npm i -g @brahmbeyond/instareel
 ## Usage
 #### &rarr; CLI 
 ```bash
-reel get-reel <url of reel>
+insta get-reel <url of reel>
 ```
 `example :`
 ```bash
-reel get-reel https://www.instagram.com/p/C3C2RnRA2dx/
+insta get-reel https://www.instagram.com/p/C3C2RnRA2dx/
 ```
 
 #### OR

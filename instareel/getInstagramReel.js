@@ -8,7 +8,7 @@ process.on('unhandledRejection', (reason, promise) => {
 
 const clickDismissButtonIfRequired = async (page) => {
     if (page.url().includes('#')) {
-        console.log('clicking dismiss button');
+        // console.log('clicking dismiss button');
         await page.click('#dismiss-button');
     }
 }
@@ -30,7 +30,7 @@ const getInstagramReel = async (instagramReelURL) => {
         ];
 
         const randomUserAgent = userAgents[Math.floor(Math.random() * userAgents.length)];
-        console.log(randomUserAgent);
+        // console.log(randomUserAgent);
         await page.setUserAgent(randomUserAgent);
 
         let loopCount = 0; // to prevent multiple page.goto calls
@@ -41,37 +41,37 @@ const getInstagramReel = async (instagramReelURL) => {
             if (loopCount === 0) {
                 await page.goto(WebsiteURL);
                 page.waitForNavigation({ waitUntil: 'networkidle0' })
-                console.log('snapinsta opened');
+                // console.log('snapinsta opened');
             }
 
             await clickDismissButtonIfRequired(page);
 
             await page.waitForSelector('#url');
-            console.log('url found');
+            // console.log('url found');
             await page.$eval('input[name="url"]', (el, value) => el.value = value, url);
-            console.log('URL entered');
+            // console.log('URL entered');
 
             await clickDismissButtonIfRequired(page);
 
             await page.waitForSelector('button[type="submit"]');
             await page.$eval('button[type="submit"]', button => button.click());
-            console.log('submit clicked');
+            // console.log('submit clicked');
 
             await clickDismissButtonIfRequired(page);
 
             await page.waitForSelector('.download-bottom');
-            console.log('download-bottom found');
+            // console.log('download-bottom found');
 
             await clickDismissButtonIfRequired(page);
 
             const href = await page.$eval('.download-bottom a', a => a.href);
-            console.log(href);
+            // console.log(href);
             downloadLinks.push(href);
             loopCount++;
 
             if (instagramReelURL.length > 1) {    // if there are multiple URLs
                 await page.waitForSelector('.download-footer');
-                console.log('download-footer found');
+                // console.log('download-footer found');
                 await clickDismissButtonIfRequired(page);
                 await page.$eval('.download-footer a:nth-child(2)', button => button.click());
             }
