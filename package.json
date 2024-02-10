@@ -1,6 +1,9 @@
 {
-  "dependencies": {
-    "npm": "^10.4.0",
-    "puppeteer": "^22.0.0"
-  }
+  "name": "brahmbeyond-insta-downloader",
+  "version": "1.0.0",
+  "description": "Instagram Reels downloader and post scrapper",
+  "main": "index.js",
+  "author": "Shubham Yadav",
+  "license": "MIT",
+  "private": false
 }

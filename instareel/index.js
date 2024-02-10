@@ -1,13 +1,19 @@
-import puppeteer from 'puppeteer';
+const puppeteer = require('puppeteer');
+
+process.on('unhandledRejection', (reason, promise) => {
+    if (reason.message !== 'Navigating frame was detached') {
+        console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    }
+});
 
 const clickDismissButtonIfRequired = async (page) => {
     if (page.url().includes('#')) {
-        console.log('clicking dismiss button');
+        // console.log('clicking dismiss button');
         await page.click('#dismiss-button');
     }
 }
 
-const URL = 'https://www.instagram.com/reels/C1YuIvdP1xX/'
+// const URL = 'https://www.instagram.com/reels/C1YuIvdP1xX/'
 
 const getInstagramReel = async (instagramReelURL) => {
     try {
@@ -23,31 +29,31 @@ const getInstagramReel = async (instagramReelURL) => {
         ];
 
         const randomUserAgent = userAgents[Math.floor(Math.random() * userAgents.length)];
-        console.log(randomUserAgent);
+        // console.log(randomUserAgent);
         await page.setUserAgent(randomUserAgent);
 
         const url = 'https://snapinsta.app';
         await page.goto(url);
         page.waitForNavigation({ waitUntil: 'networkidle0' })
-        console.log('snapinsta opened');
+        // console.log('snapinsta opened');
 
         await clickDismissButtonIfRequired(page);
 
         await page.waitForSelector('#url');
-        console.log('url found');
+        // console.log('url found');
         await page.$eval('input[name="url"]', (el, value) => el.value = value, instagramReelURL);
-        console.log('URL entered');
+        // console.log('URL entered');
 
         await clickDismissButtonIfRequired(page);
 
         await page.waitForSelector('button[type="submit"]');
         await page.$eval('button[type="submit"]', button => button.click());
-        console.log('submit clicked');
+        // console.log('submit clicked');
 
         await clickDismissButtonIfRequired(page);
 
         await page.waitForSelector('.download-bottom');
-        console.log('download-bottom found');
+        // console.log('download-bottom found');
 
         await clickDismissButtonIfRequired(page);
 
@@ -55,13 +61,15 @@ const getInstagramReel = async (instagramReelURL) => {
         console.log(href);
 
         await browser.close();
+
+        // return href;  // return the href value
+
     } catch (error) {
         console.error(error);
-        // await browser.close();
+        await browser.close();
     }
 }
 
-getInstagramReel(URL);
 
-export default getInstagramReel;
+module.exports = getInstagramReel;
 
