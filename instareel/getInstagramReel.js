@@ -16,9 +16,9 @@ const clickDismissButtonIfRequired = async (page) => {
 // const URL = 'https://www.instagram.com/reels/C1YuIvdP1xX/'
 
 const getInstagramReel = async (instagramReelURL) => {
-
+    let browser;
     try {
-        const browser = await puppeteer.launch();
+        browser = await puppeteer.launch();
         const page = await browser.newPage();
 
         const userAgents = [
@@ -60,13 +60,11 @@ const getInstagramReel = async (instagramReelURL) => {
             await clickDismissButtonIfRequired(page);
 
             const href = await page.$eval('.download-bottom a', a => a.href);
-            console.log(href);
-
+            // console.log(href);
             await page.close();
-
+            return href;
         }
         await browser.close();
-
         // return href;  // return the href value
 
     } catch (error) {
@@ -74,8 +72,23 @@ const getInstagramReel = async (instagramReelURL) => {
         if (browser) {
             await browser.close();
         }
+    } finally {
+        if (browser) {
+            await browser.close();
+        }
     }
 }
+
+const ii = ['https://www.instagram.com/p/C2ZE9tqLTQz/']
+// const z = getInstagramReel(ii);
+// console.log(z);
+const main = async () => {
+    const reel = await getInstagramReel(ii);
+    console.log(reel);
+    // Now reel contains the href value
+}
+
+main();
 
 
 
