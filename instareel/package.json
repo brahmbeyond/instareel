@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brahmbeyond/instareel.git"
+    "url": "git+https://github.com/brahmbeyond/InstaD"
   },
   "bugs": {
-    "url": "https://github.com/brahmbeyond/instareel/issues"
+    "url": "https://github.com/brahmbeyond/InstaD/issues"
   },
-  "homepage": "https://github.com/brahmbeyond/instareel#readme"
+  "homepage": "https://github.com/brahmbeyond/InstaD#readme"
 }
