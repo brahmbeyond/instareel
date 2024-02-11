@@ -1,6 +1,11 @@
 # instareel
 
-This project allows you to download your Instagram Reels.
+This project allows you to download your Instagram Reels.<br>
+![npm](https://img.shields.io/npm/v/@brahmbeyond/instareel)
+
+![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel)
+
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=brahmbeyond.instaD&left_text=instaD%20Visitors)
 
 ## Installation
 ```bash
