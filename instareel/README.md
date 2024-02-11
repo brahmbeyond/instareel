@@ -1,7 +1,7 @@
 # instareel
 
 This project allows you to download your Instagram Reels.It provide you downloadable link for your instagram Reel.<br>
-<!-- ![npm](https://img.shields.io/npm/v/@brahmbeyond/instareel) ![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel) ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=brahmbeyond.instaD&left_text=instaD%20Visitors) -->
+![npm](https://img.shields.io/npm/v/@brahmbeyond/instareel) ![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel) ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=brahmbeyond.instaD&left_text=instaD%20Visitors)
 
 For updated information visit [Github](https://github.com/brahmbeyond/InstaD)
 
