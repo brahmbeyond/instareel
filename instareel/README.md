@@ -1,7 +1,9 @@
 # instareel
 
-This project allows you to download your Instagram Reels.<br>
-![npm](https://img.shields.io/npm/v/@brahmbeyond/instareel) ![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel) ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=brahmbeyond.instaD&left_text=instaD%20Visitors)
+This project allows you to download your Instagram Reels.It provide you downloadable link for your instagram Reel.<br>
+<!-- ![npm](https://img.shields.io/npm/v/@brahmbeyond/instareel) ![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel) ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=brahmbeyond.instaD&left_text=instaD%20Visitors) -->
+
+For updated information visit [Github](https://github.com/brahmbeyond/InstaD)
 
 ## Installation
 ```bash
@@ -32,6 +34,8 @@ reel get-reel <urls of reels seperated by spaces>
 reel get-reel https://www.instagram.com/p/C3C2RnRA2dx/ https://www.instagram.com/p/C2ZE9tqLTQz/
 ```
 #### &rarr; Code
+- The agruments to the function should be array.
+- The result returned is also a array.
 
 ```javascript
 
