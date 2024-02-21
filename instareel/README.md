@@ -1,7 +1,17 @@
 # instareel
 
-This project allows you to download your Instagram Reels.It provide you downloadable link for your instagram Reel.<br>
-![npm](https://img.shields.io/npm/v/@brahmbeyond/instareel) ![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel) ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=brahmbeyond.instaD&left_text=instaD%20Visitors)
+This project allows you to download your Instagram Reels.It provide you <b>downloadable link</b> for your instagram Reel.<br>
+<!-- ![npm](https://img.shields.io/npm/v/@brahmbeyond/instareel) ![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel) ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=brahmbeyond.instaD&left_text=instaD%20Visitors) -->
+
+Totol Downlaods - ![NPM Downloads](https://img.shields.io/npm/dt/%40brahmbeyond%2Finstareel)
+
+## Support
+
+If you find this package useful, please consider giving it a star on [GitHub](https://github.com/brahmbeyond/InstaD). This helps others discover it and encourages me to continue improving it.
+
+I'm in learning process and open to all kind of feedbacks.
+
+If you use this package in your project, I'd love to hear about it! Please tag me on [Twitter](https://twitter.com/brahmbeyond) or [Instagram](https://instagram.com/brahmbeyond).
 
 For updated information visit [Github](https://github.com/brahmbeyond/InstaD)
 
@@ -67,6 +77,35 @@ async function main() {
 
 main();
 
+```
+
+## Helper
+- If you want the JS code that can download the available array of links which you obtained from above, to your folder then you can use the code below.
+Remember to install `AXIOS` - `npm i axios`
+```javascript
+
+const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
+
+async function downloadVideo(url, index) {
+    const response = await axios.get(url, { responseType: 'arraybuffer' });
+    fs.writeFileSync(path.join(__dirname, `video${index}.mp4`), response.data);
+}
+
+const video = ['link','link']; // Replace with your array of Video URLs that you got from the using the npm package
+
+video.forEach((url, index) => {
+    downloadVideo(url, index);
+});
+
+```
+OR 
+- you can use it in your HTML with `<a>` tag which on clickin will download the video - 
+
+
+```html
+<a href="<Link_here>">Download Video</a>
 ```
 
 
