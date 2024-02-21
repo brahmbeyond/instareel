@@ -7,6 +7,7 @@ Totol Downlaods - ![NPM Downloads](https://img.shields.io/npm/dt/%40brahmbeyond%
 
 ## Support
 
+
 If you find this package useful, please consider giving it a star on [GitHub](https://github.com/brahmbeyond/InstaD). This helps others discover it and encourages me to continue improving it.
 
 I'm in learning process and open to all kind of feedbacks.
@@ -14,6 +15,11 @@ I'm in learning process and open to all kind of feedbacks.
 If you use this package in your project, I'd love to hear about it! Please tag me on [Twitter](https://twitter.com/brahmbeyond) or [Instagram](https://instagram.com/brahmbeyond).
 
 For updated information visit [Github](https://github.com/brahmbeyond/InstaD)
+
+
+## npm page
+https://www.npmjs.com/package/@brahmbeyond/instareel
+
 
 ## Installation
 ```bash
@@ -121,7 +127,8 @@ Feedback and Contributions are always welcome!
 
 This is a third party library and not associated with Instagram. We're strictly against spam. You are liable for all the actions you take.
 
-
+## Demo Blog 
+https://brahm.code.blog/2024/02/21/introducing-instareel-your-ultimate-instagram-reel-downloader/
 
 
 
