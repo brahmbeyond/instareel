@@ -26,13 +26,21 @@ const scrapeWithoutLogin = async (tag) => {
         console.log('scrolled');
     })
 
-    const images = await page.$$eval('img', images =>
+    let images = await page.$$eval('img', images =>
         images.map(image => image.getAttribute('src'))
     );
 
+    images = images.slice(2);
     console.log('Number of scraped images: ', images.length);
-    console.log(images);
+    console.log(images);   // array of image links
+    await browser.close();
+    return images;
 
 }
 
-// scrapeWithoutLogin('nature');
+scrapeWithoutLogin('nature');
+
+
+
+
+module.exports = scrapeWithoutLogin;
