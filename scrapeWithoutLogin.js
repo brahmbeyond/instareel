@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
+const downloadImages = require('./downloadImages.js');
 
-const scrapeWithoutLogin = async (tag) => {
+const scrapeWithoutLogin = async (tag, wantToDownload = true) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
@@ -16,11 +17,10 @@ const scrapeWithoutLogin = async (tag) => {
     console.log(randomUserAgent);
     await page.setUserAgent(randomUserAgent);
 
-    URL = `https://www.instagram.com/explore/tags/${tag}/`;
-    await page.goto(URL);
-
-    await page.goto(URL, { waitUntil: 'networkidle0' });
-    console.log('page loaded');
+    pageURL = `https://www.instagram.com/explore/tags/${tag}/`;
+    await page.goto(pageURL);
+    await page.goto(pageURL, { waitUntil: 'networkidle0' });
+    console.log(tag + ' : page loaded');
     await page.evaluate(() => {
         window.scrollBy(0, document.body.scrollHeight);
         console.log('scrolled');
@@ -31,16 +31,23 @@ const scrapeWithoutLogin = async (tag) => {
     );
 
     images = images.slice(2);
-    console.log('Number of scraped images: ', images.length);
-    console.log(images);   // array of image links
+    console.log('Number of images found : ', images.length);
+    // console.log(images);   // array of image links
+    if (wantToDownload) {
+        console.log('Downloading images...');
+        await downloadImages(images);
+    }
     await browser.close();
     return images;
 
 }
 
-scrapeWithoutLogin('nature');
+// async function test() {
+//     const images = await scrapeWithoutLogin('bholenath', true);
+//     console.log(images);
+// }
 
-
+// test();
 
 
 module.exports = scrapeWithoutLogin;

@@ -1,13 +1,65 @@
 {
-  "name": "brahmbeyond-insta-downloader",
-  "version": "1.0.0",
-  "description": "Instagram Reels downloader and post scrapper",
+  "name": "@brahmbeyond/instareel",
+  "version": "1.0.5",
+  "description": "Instagram Reels downloader using JavaScript",
+  "keywords": [
+    "instagram",
+    "reels",
+    "downloader",
+    "javascript",
+    "npm",
+    "node",
+    "cli",
+    "puppeteer",
+    "commander",
+    "reel",
+    "video",
+    "download",
+    "instareel",
+    "brahmbeyond",
+    "Instagram downloader",
+    "Social media downloader",
+    "JavaScript downloader",
+    "Node.js downloader",
+    "Web scraping",
+    "Web automation",
+    "Download tool",
+    "Instagram video downloader",
+    "Puppeteer tool",
+    "Command-line tool",
+    "Web crawler",
+    "Data extraction",
+    "Social media scraping",
+    "Automation tool",
+    "Web content downloader",
+    "Instagram scraper",
+    "Instagram crawler",
+    "Instagram automation",
+    "Data harvesting",
+    "Web scraping tool"
+  ],
   "main": "index.js",
   "author": "Shubham Yadav",
   "license": "MIT",
   "private": false,
+  "bin": {
+    "insta": "./cli.js"
+  },
+  "scripts": {
+    "reel": "node cli.js get-reel"
+  },
   "dependencies": {
-    "@brahmbeyond/instareel": "^1.0.0",
-    "axios": "^1.6.7"
-  }
+    "axios": "^1.6.7",
+    "commander": "^12.0.0",
+    "ip": "^1.1.8",
+    "puppeteer": "^22.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brahmbeyond/InstaD"
+  },
+  "bugs": {
+    "url": "https://github.com/brahmbeyond/InstaD/issues"
+  },
+  "homepage": "https://github.com/brahmbeyond/InstaD#readme"
 }
