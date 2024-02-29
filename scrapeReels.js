@@ -1,6 +1,8 @@
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 const getInstagramReel = require('./getInstagramReel.js');
+const axios = require('axios');
+const path = require('path');
 
 async function setCookies(page, cookiesFile) {
     const cookies = JSON.parse(fs.readFileSync(cookiesFile, 'utf8'));
@@ -15,9 +17,21 @@ function filterInstagramURLs(urls) {
     return filteredURLs;
 }
 
+
+async function downloadVideo(url, index) {
+    const response = await axios.get(url, { responseType: 'arraybuffer' });
+
+    const videoDir = path.join(__dirname, 'Reels');
+    if (!fs.existsSync(videoDir)) {
+        fs.mkdirSync(videoDir);
+    }
+    fs.writeFileSync(path.join(videoDir, `video${index}.mp4`), response.data);
+}
+
+
 let reel;
 
-const scrapeReels = async (username = 'theoddballgazette', scrollCounts = 0, wantToDownload = true) => {
+const scrapeReels = async (username = 'the.pipe_dream', scrollCounts = 1, wantToDownload = true) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await setCookies(page, 'exported-cookies.json');
@@ -25,9 +39,9 @@ const scrapeReels = async (username = 'theoddballgazette', scrollCounts = 0, wan
     // ... rest of your code ...
     try {
 
-        URL = `https://www.instagram.com/${username}/reels/`;
+        pageURL = `https://www.instagram.com/${username}/reels/`;
         console.log('Entered url');
-        await page.goto(URL, { waitUntil: 'networkidle0' });
+        await page.goto(pageURL, { waitUntil: 'networkidle0' });
         console.log('page loaded : ' + username);
         await page.screenshot({ path: 'screenshot6.png' }, { fullPage: true });
 
@@ -46,9 +60,11 @@ const scrapeReels = async (username = 'theoddballgazette', scrollCounts = 0, wan
         const filteredLinks = filterInstagramURLs(links);
         console.log('Completed Filtering the Links...');
         console.log(filteredLinks);
+        reel = await getInstagramReel(filteredLinks);
         if (wantToDownload) {
-            reel = await getInstagramReel(filteredLinks);
-            console.log(reel);
+            reel.forEach((url, index) => {
+                downloadVideo(url, index);
+            });
         }
         await browser.close();
         return reel;

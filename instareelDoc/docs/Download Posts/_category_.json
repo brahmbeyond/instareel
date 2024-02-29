@@ -1,0 +1,8 @@
+{
+  "label": "Posts",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Download or Get links of Images of Instagram Posts."
+  }
+}

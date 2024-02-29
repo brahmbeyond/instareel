@@ -3,6 +3,8 @@
 const getInstagramReel = require('./getInstagramReel.js')
 const { Command } = require('commander');
 const program = new Command();
+const { exec } = require('child_process');
+
 
 program
     .command('get-reel <url...>')
@@ -15,6 +17,11 @@ program
             console.log(error)
         }
     })
+
+program
+    .command('cookies')
+    .description('Set Cookies')
+    .action()
 
 
 program.parse(process.argv)    

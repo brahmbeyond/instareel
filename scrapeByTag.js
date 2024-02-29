@@ -36,7 +36,7 @@ const scrapeByTag = async (tag, wantToDownload = true) => {
 
 }
 
-// scrapeByTag('nature');
+
 
 
 
