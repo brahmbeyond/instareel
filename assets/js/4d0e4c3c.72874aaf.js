@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinstareel_doc=self.webpackChunkinstareel_doc||[]).push([[6631],{1092:e=>{e.exports=JSON.parse('{"permalink":"/instareel/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

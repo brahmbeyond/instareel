@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinstareel_doc=self.webpackChunkinstareel_doc||[]).push([[9465],{5065:e=>{e.exports=JSON.parse('{"permalink":"/instareel/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

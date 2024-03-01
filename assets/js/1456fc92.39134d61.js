@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinstareel_doc=self.webpackChunkinstareel_doc||[]).push([[1485],{8530:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/instareel/blog/tags/hello","allTagsPath":"/instareel/blog/tags","count":2,"unlisted":false}')}}]);

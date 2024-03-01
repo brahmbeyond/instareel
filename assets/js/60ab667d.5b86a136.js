@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinstareel_doc=self.webpackChunkinstareel_doc||[]).push([[4057],{1966:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);

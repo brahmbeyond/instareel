@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinstareel_doc=self.webpackChunkinstareel_doc||[]).push([[7666],{4562:e=>{e.exports=JSON.parse('{"label":"facebook","permalink":"/instareel/blog/tags/facebook","allTagsPath":"/instareel/blog/tags","count":1,"unlisted":false}')}}]);
