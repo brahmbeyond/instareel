@@ -5,6 +5,17 @@
  */
 
 /* You can override the default Infima variables here. */
+a {
+  color: #0d9900;
+  font-weight: bold;
+  opacity: 1;
+}
+a:hover {
+  color: #397733;
+}
+
+
+
 :root {
   --ifm-color-primary: #080a09;
   --ifm-color-primary-dark: #2e8555;
@@ -21,7 +32,7 @@
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-light: #149152;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
 }
@@ -82,7 +93,7 @@
 .table-of-contents__link:hover code,
 .table-of-contents__link--active,
 .table-of-contents__link--active code {
-  color: #29d5b0;
+  color: #0f9948;
 }
 
 
@@ -136,4 +147,14 @@
 .footer__link-item:hover {
 
   color: #2e8555;
+}
+
+
+
+.theme-edit-this-page {
+  color: #2e8555;
+}
+
+[data-theme='dark'] .theme-edit-this-page:hover {
+  color: #fbfffd;
 }

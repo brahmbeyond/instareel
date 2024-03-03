@@ -78,12 +78,17 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
+          {
+            type: 'search',
+            position: 'right',
+          },
           { href: 'http://brahmbeyond.code.blog/', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/brahmbeyond/instareel/',
             label: 'GitHub',
             position: 'right',
           },
+
         ],
       },
       footer: {

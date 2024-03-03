@@ -2,24 +2,14 @@
 sidebar_position: 1
 ---
 
-export const Highlight = ({children}) => (
-  <span
-    style={{
-      backgroundColor: 'rgb(194 255 202)',
-      borderRadius: '2px',
-      color: '#ffffff',
-      padding: '0.2rem',
-    }}>
-    {children}
-  </span>
-);
+
 
 
 # By Tag
 
 ## Function - scrapeByTag()
 
-- **Check if the cookies file is already set.** If not the Check Out <Highlight>[How to set Cookies](../Cookies)</Highlight>
+- **Check if the cookies file is already set.** If not the Check Out [How to set Cookies](../Cookies)
 - **Remember, all functions return promises.**
 
 ### Arguments

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Function - scrapeReels()
 
-- **Check if the cookies file is already set.**
+- **Check if the cookies file is already set.** If not the Check Out [How to set Cookies](../Cookies)
 - **Remember, all functions return promises.**
 
 ### Arguments
