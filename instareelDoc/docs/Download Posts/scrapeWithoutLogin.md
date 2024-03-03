@@ -18,6 +18,9 @@ sidebar_position: 1
 By default, the second argument is set to `true` (meaning images will be downloaded to a folder named 'Images').
 
 ```js title="insta.js"
+import scrapeWithoutLogin from '@brahmbeyond/instareel'
+// const scrapeWithoutLogin = reuire('@brahmbeyond/instareel')
+
 async function main() {
     const images = await scrapeWithoutLogin('nature');
     console.log(images); // This will log the array of image URLs  
@@ -30,6 +33,10 @@ main().catch(console.error);
 ### Download Images only
 
 ```js title="insta.js"
+import scrapeWithoutLogin from '@brahmbeyond/instareel'
+// const scrapeWithoutLogin = reuire('@brahmbeyond/instareel')
+
+
 async function main() {
      await scrapeWithoutLogin('nature'); // this will download images only
 
@@ -42,6 +49,10 @@ main().catch(console.error);
 ### If you only want Image Links only
 Set second argument to `false`  
 ```js title="insta.js"
+import scrapeWithoutLogin from '@brahmbeyond/instareel'
+// const scrapeWithoutLogin = reuire('@brahmbeyond/instareel')
+
+
 async function main() {
     const images = await scrapeWithoutLogin('nature', false);
     console.log(images); // This will log the array of image URLs
@@ -55,6 +66,10 @@ main().catch(console.error);
 ### You can also use .then()
 
 ```js title="insta.js"
+import scrapeWithoutLogin from '@brahmbeyond/instareel'
+// const scrapeWithoutLogin = reuire('@brahmbeyond/instareel')
+
+
 scrapeWithoutLogin('nature', false).then(images => {
     console.log(images); // This will log the array of image URLs
 });
