@@ -48,8 +48,8 @@ Feedback and Contributions are always welcome!
 
 This project, not affiliated with Instagram, was created for educational purposes during my learning process. Use the provided information and code at your own risk. Misuse is not encouraged or condoned. The author assumes no responsibility for misuse of this project.
 
-## Demo Blog 
-https://brahm.code.blog/2024/02/21/introducing-instareel-your-ultimate-instagram-reel-downloader/
+## Blog 
+[Blog](https://brahmbeyond.code.blog)
 
 
 
