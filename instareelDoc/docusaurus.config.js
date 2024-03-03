@@ -130,7 +130,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Instareel, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Instareel, Developed by <a href='https://github.com/brahmbeyond'>Shubham Yadav</a>.`,
       },
       prism: {
         theme: prismThemes.github,
