@@ -6,7 +6,9 @@ This project allows you to download Reels and Posts on Instagram.
 ![NPM](https://img.shields.io/npm/l/@brahmbeyond/instareel) 
 
 
-Totol Downlaods - ![NPM Downloads](https://img.shields.io/npm/dt/%40brahmbeyond%2Finstareel) 
+![NPM Downloads by package author](https://img.shields.io/npm-stat/dy/brahmbeyond?style=flat-square&color=pink)
+
+
 </center>
 
 ## **
