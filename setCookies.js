@@ -3,7 +3,7 @@ const path = require('path');
 
 // Define the source file and the target directory
 const srcFile = "exported-cookies.json";
-const targetDir = path.join("node_modules", "@brahmbeyond", "instarel");
+const targetDir = path.join("node_modules", "@brahmbeyond", "instareel");
 
 // Check if the source file exists
 if (!fs.existsSync(srcFile)) {

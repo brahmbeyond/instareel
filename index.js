@@ -5,4 +5,12 @@ const scrapePosts = require('./scrapePosts.js');
 const scrapeReels = require('./scrapeReels.js');
 const scrapeWithoutLogin = require('./scrapeWithoutLogin.js');
 
-module.exports = getInstagramReel, downloadImages, scrapeByTag, scrapePosts, scrapeReels, scrapeWithoutLogin;
+module.exports = {
+    getInstagramReel,
+    downloadImages,
+    scrapeByTag,
+    scrapePosts,
+    scrapeReels,
+    scrapeWithoutLogin
+};
+
