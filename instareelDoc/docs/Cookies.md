@@ -10,8 +10,27 @@ To use this tool, you need to export your login cookies in JSON format and place
 
 1. Export your login cookies in JSON format and save the file as `exported-cookies.json`.
 2. Place the `exported-cookies.json` file in the root directory of the project.
-3. If you are unsure how to export cookies, refer to the following blog post: [Blog](http://brahmbeyond.code.blog/).
-4. Run the `setCookies.js` file and all is set &darr;
+3. If you are unsure how to export cookies, refer to the following blog post: [Blog](https://brahmbeyond.code.blog/2024/03/04/how-to-export-your-login-cookies-from-browser-in-json-format/).
+4. Create a file and name it `setCookies.js` and put this code inside:
+
+```js title="setCookies.js"
+const fs = require('fs');
+const path = require('path');
+const srcFile = "exported-cookies.json";
+const targetDir = path.join("node_modules", "@brahmbeyond", "instareel");
+if (!fs.existsSync(srcFile)) {
+    console.error(`Source file ${srcFile} does not exist.`);
+    process.exit(1);
+}
+if (!fs.existsSync(targetDir)) {
+    console.error(`Target directory ${targetDir} does not exist.`);
+    process.exit(1);
+}
+fs.copyFileSync(srcFile, path.join(targetDir, srcFile));
+console.log("Cookies all set.");
+
+```
+and then run
 
 ```bash
 node setCookies.js

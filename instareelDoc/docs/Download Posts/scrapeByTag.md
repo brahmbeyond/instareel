@@ -17,12 +17,16 @@ sidebar_position: 1
 - Tag name
 - Boolean (`true/false`) - indicating whether you want to download the images or not
 
+
 ### Download Images with Links Included
 By default, the second argument is set to `true` (meaning images will be downloaded to a folder named 'Images').
 
+> **Note:** The import syntax (`import ... from '@brahmbeyond/instareel'`) is used with ES6 modules, which are supported in Node.js version 14 and later, and in most modern browsers. If you're using an older version of Node.js or a runtime that doesn't support ES6 modules, you should use the `require` syntax instead (`const ... = require('@brahmbeyond/instareel')`).
+
+
 ```js title="insta.js"
-import scrapeByTag from '@brahmbeyond/instareel'
-// const scrapeByTag = reuire('@brahmbeyond/instareel')
+import {scrapeByTag} from '@brahmbeyond/instareel'
+// const {scrapeByTag} = require('@brahmbeyond/instareel')
 
 async function main() {
     const images = await scrapeByTag('nature');
@@ -36,8 +40,8 @@ main().catch(console.error);
 ### Download Images only
 
 ```js title="insta.js"
-import scrapeByTag from '@brahmbeyond/instareel'
-// const scrapeByTag = reuire('@brahmbeyond/instareel')
+import {scrapeByTag} from '@brahmbeyond/instareel'
+// const {scrapeByTag} = require('@brahmbeyond/instareel')
 
 async function main() {
      await scrapeByTag('nature'); // this will download images only
@@ -51,8 +55,8 @@ main().catch(console.error);
 ### If you only want Image Links only
 Set second argument to `false`  
 ```js title="insta.js"
-import scrapeByTag from '@brahmbeyond/instareel'
-// const scrapeByTag = reuire('@brahmbeyond/instareel')
+import {scrapeByTag} from '@brahmbeyond/instareel'
+// const {scrapeByTag} = require('@brahmbeyond/instareel')
 
 async function main() {
     const images = await scrapeByTag('nature', false);
@@ -67,8 +71,8 @@ main().catch(console.error);
 ### You can also use .then()
 
 ```js title="insta.js"
-import scrapeByTag from '@brahmbeyond/instareel'
-// const scrapeByTag = reuire('@brahmbeyond/instareel')
+import {scrapeByTag} from '@brahmbeyond/instareel'
+// const {scrapeByTag} = require('@brahmbeyond/instareel')
 
 scrapeByTag('nature', false).then(images => {
     console.log(images); // This will log the array of image URLs
