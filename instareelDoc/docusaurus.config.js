@@ -65,6 +65,9 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      headTags: [
+        { tagName: 'script', attributes: { src: '/custom.html' } },
+      ],
       navbar: {
         title: 'Instareel',
         logo: {
