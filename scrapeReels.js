@@ -21,7 +21,7 @@ function filterInstagramURLs(urls) {
 async function downloadVideo(url, index) {
     const response = await axios.get(url, { responseType: 'arraybuffer' });
 
-    const videoDir = path.join(__dirname, 'Reels');
+    const videoDir = path.join(process.cwd(), 'Reels');
     if (!fs.existsSync(videoDir)) {
         fs.mkdirSync(videoDir);
     }
