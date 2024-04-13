@@ -1,4 +1,7 @@
 ---
+title: Scrape by Tag in Instareel
+description: A guide on how to use the scrapeByTag function in Instareel to scrape Instagram posts by tag.
+keywords: [Instareel, Installation, Javascript,Instagram downloader,instagram,reels downloader,instagram post downloader,instagram reels downloader,Javascript package, Node.js, npm]
 sidebar_position: 1
 ---
 

@@ -68,6 +68,13 @@ const config = {
       headTags: [
         { tagName: 'script', attributes: { src: '/custom.html' } },
       ],
+      metadata: [
+        { name: 'google-site-verification', content: 'PuYRytGholIdQFc80WjEHwDV_qSWcfjHAFInlQ7W7kI' },
+        { name: 'yandex-verification', content: 'daa743f9d351ed33' },
+        { name: 'description', content: 'Instareel is a free JavaScript library for downloading Instagram reels, posts, and images.' },
+        { name: 'keywords', content: 'Instagram, Reels, Posts, Downloader, JavaScript, Library, Free, Images, Instareel' },
+      ],
+
       navbar: {
         title: 'Instareel',
         logo: {

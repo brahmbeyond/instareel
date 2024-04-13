@@ -1,6 +1,10 @@
 ---
+title: Scrape Reels in Instareel
+description: A guide on how to use the scrapeReels function in Instareel to download Instagram reels.
+keywords: [Instareel, Installation, Javascript,Instagram downloader,instagram,reels downloader,instagram post downloader,instagram reels downloader,Javascript package, Node.js, npm]
 sidebar_position: 2
 ---
+
 
 # By Username
 

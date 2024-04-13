@@ -1,4 +1,8 @@
 ---
+title: Cookies Handling in Instareel
+description: A guide on how to export your login cookies in JSON format and use them with Instareel.
+image: /path/to/your/image.jpg
+keywords: [Instareel, Cookies, JSON, Instareel, Installation, Javascript,Instagram downloader,instagram,reels downloader,instagram post downloader,instagram reels downloader,Javascript package, Node.js, npm]
 sidebar_position: 8
 ---
 
